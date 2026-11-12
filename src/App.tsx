@@ -58,13 +58,19 @@ export default function App() {
     }, 3200);
   }, []);
 
-  // Secret Admin access triggers: /admin, ?admin, #admin, Ctrl+Shift+A / Cmd+Shift+A
+  // Secret Admin access triggers: /admin, ?admin, ?mode=admin, #admin, #/admin, Ctrl+Shift+A
   useEffect(() => {
     const checkAdminUrl = () => {
       const params = new URLSearchParams(window.location.search);
       const path = window.location.pathname.toLowerCase().replace(/\/+$/, '');
-      const hash = window.location.hash.toLowerCase();
-      if (params.has('admin') || hash === '#admin' || path === '/admin') {
+      const hash = window.location.hash.toLowerCase().replace(/\/+$/, '');
+      if (
+        params.has('admin') ||
+        params.get('mode') === 'admin' ||
+        hash === '#admin' ||
+        hash === '#/admin' ||
+        path === '/admin'
+      ) {
         setIsAdminOpen(true);
       }
     };
