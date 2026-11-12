@@ -1,0 +1,8 @@
+{
+  "name": "জামিয়া কারীমিয়া আরাবিয়া — ফটোকার্ড জেনারেটর",
+  "description": "জামিয়া কারীমিয়া আরাবিয়া, রামপুরা মাদরাসা, ঢাকা-১২১৯ — ইলমি পুনর্মিলনী ও ফিকহি কর্মশালা অনলাইন ফটোকার্ড জেনারেটর।",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
